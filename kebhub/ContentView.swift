@@ -6,19 +6,36 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct ContentView: View {
+    @Environment(\.modelContext) var modelContext
+    @Query var kebabbaros: [Kebabbaro]
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        NavigationStack {
+            List {
+                ForEach(kebabbaros) { k in
+                    Text(k.name).font(.headline)
+                }
+                .onDelete(perform:deleteKebabbaros)
+            }
+        .navigationTitle("Kebhub")
+        .toolbar {
+            Button("Add sample") {
+                modelContext.insert(Kebabbaro(name: "matteotti kebab", imageName: "logo", address: "piazza matteotti", positive: 100000, negative: 0))
+                }
+            }
         }
-        .padding()
+    }
+    
+    func deleteKebabbaros(_ indexSet: IndexSet) {
+        for index in indexSet {
+            let k = kebabbaros[index]
+            modelContext.delete(k)
+        }
     }
 }
 
 #Preview {
-    ContentView()
+    ContentView().modelContainer(for: Kebabbaro.self)
 }

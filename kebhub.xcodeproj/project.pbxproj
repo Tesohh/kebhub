@@ -11,6 +11,7 @@
 		A215E39A2AE8737500F03549 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A215E3992AE8737500F03549 /* ContentView.swift */; };
 		A215E39C2AE8737600F03549 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A215E39B2AE8737600F03549 /* Assets.xcassets */; };
 		A215E39F2AE8737600F03549 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A215E39E2AE8737600F03549 /* Preview Assets.xcassets */; };
+		A215E3A62AE8739E00F03549 /* Kebabbaro.swift in Sources */ = {isa = PBXBuildFile; fileRef = A215E3A52AE8739E00F03549 /* Kebabbaro.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		A215E3992AE8737500F03549 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		A215E39B2AE8737600F03549 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A215E39E2AE8737600F03549 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		A215E3A52AE8739E00F03549 /* Kebabbaro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kebabbaro.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +55,7 @@
 			children = (
 				A215E3972AE8737500F03549 /* kebhubApp.swift */,
 				A215E3992AE8737500F03549 /* ContentView.swift */,
+				A215E3A52AE8739E00F03549 /* Kebabbaro.swift */,
 				A215E39B2AE8737600F03549 /* Assets.xcassets */,
 				A215E39D2AE8737600F03549 /* Preview Content */,
 			);
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A215E3A62AE8739E00F03549 /* Kebabbaro.swift in Sources */,
 				A215E39A2AE8737500F03549 /* ContentView.swift in Sources */,
 				A215E3982AE8737500F03549 /* kebhubApp.swift in Sources */,
 			);
