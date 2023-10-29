@@ -16,32 +16,7 @@ struct ContentView: View {
         NavigationStack {
             List {
                 ForEach(kebabbaros) { k in
-                    HStack {
-                        Image(k.imageName).resizable().frame(width: 50, height: 50, alignment: .center).clipShape(.rect(cornerRadius: 5))
-                        
-                        VStack {
-                            HStack {
-                                Text(k.name).font(.headline).frame(width:150, height: 15, alignment: .leading)
-                                Spacer()
-                            }
-                            HStack {
-                                Text(k.address).font(.subheadline).truncationMode(.tail).frame(width: 150, height:10, alignment: .leading)
-                                Spacer()
-                            }
-                        }
-                        
-                        Spacer()
-                        
-                        Text("\(k.points)").foregroundStyle(k.points > 0 ? .green : .red)
-                        
-                        Button() {
-                            k.points += 1
-                        } label: { Image(systemName: "hand.thumbsup") }.buttonStyle(.borderless)
-                        
-                        Button() {
-                            k.points -= 1
-                        } label: { Image(systemName: "hand.thumbsdown") }.buttonStyle(.borderless)
-                    }
+                    KebabbaroView(kebabbaro: k)
                 }
                 .onDelete(perform:deleteKebabbaros)
             }

@@ -15,12 +15,16 @@ class Kebabbaro {
     var imageName: String
     var address: String
     var points: Int
+    var wheelChairAccessible: Bool
+    var petFriendly: Bool
     
-    init(name: String, imageName: String, address: String, points: Int) {
+    init(name: String, imageName: String, address: String, points: Int, wheelChair: Bool = false, petFriendly: Bool = false) {
         self.name = name
         self.imageName = imageName
         self.address = address
         self.points = points
+        self.wheelChairAccessible = wheelChair
+        self.petFriendly = petFriendly
     }
 }
 

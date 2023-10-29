@@ -12,6 +12,8 @@
 		A215E39C2AE8737600F03549 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A215E39B2AE8737600F03549 /* Assets.xcassets */; };
 		A215E39F2AE8737600F03549 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A215E39E2AE8737600F03549 /* Preview Assets.xcassets */; };
 		A215E3A62AE8739E00F03549 /* Kebabbaro.swift in Sources */ = {isa = PBXBuildFile; fileRef = A215E3A52AE8739E00F03549 /* Kebabbaro.swift */; };
+		A21750FA2AED055200E5BB91 /* EditKebabbaroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A21750F92AED055200E5BB91 /* EditKebabbaroView.swift */; };
+		A21750FC2AED06E500E5BB91 /* KebabbaroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A21750FB2AED06E500E5BB91 /* KebabbaroView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +23,8 @@
 		A215E39B2AE8737600F03549 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A215E39E2AE8737600F03549 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A215E3A52AE8739E00F03549 /* Kebabbaro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kebabbaro.swift; sourceTree = "<group>"; };
+		A21750F92AED055200E5BB91 /* EditKebabbaroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditKebabbaroView.swift; sourceTree = "<group>"; };
+		A21750FB2AED06E500E5BB91 /* KebabbaroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KebabbaroView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +62,8 @@
 				A215E3A52AE8739E00F03549 /* Kebabbaro.swift */,
 				A215E39B2AE8737600F03549 /* Assets.xcassets */,
 				A215E39D2AE8737600F03549 /* Preview Content */,
+				A21750F92AED055200E5BB91 /* EditKebabbaroView.swift */,
+				A21750FB2AED06E500E5BB91 /* KebabbaroView.swift */,
 			);
 			path = kebhub;
 			sourceTree = "<group>";
@@ -142,7 +148,9 @@
 			files = (
 				A215E3A62AE8739E00F03549 /* Kebabbaro.swift in Sources */,
 				A215E39A2AE8737500F03549 /* ContentView.swift in Sources */,
+				A21750FC2AED06E500E5BB91 /* KebabbaroView.swift in Sources */,
 				A215E3982AE8737500F03549 /* kebhubApp.swift in Sources */,
+				A21750FA2AED055200E5BB91 /* EditKebabbaroView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
