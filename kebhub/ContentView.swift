@@ -20,10 +20,10 @@ struct ContentView: View {
                 }
                 .onDelete(perform:deleteKebabbaros)
             }
-        .navigationTitle("Kebhub")
-        .toolbar {
-            Button("Add sample") {
-                modelContext.insert(Kebabbaro(name: "Matteotti Turkish", imageName: "matteottikebab", address: "Piazza Matteotti, Bolzano BZ", points: 0))
+            .navigationTitle("Kebhub")
+            .toolbar {
+                Button("Nuovo") {
+                    modelContext.insert(Kebabbaro(name: "Nuovo kebabbaro", imageName: "generickebab", address: "Indirizzo...", points: 0))
                 }
             }
         }
@@ -42,6 +42,12 @@ struct ContentView: View {
             let k = kebabbaros[index]
             modelContext.delete(k)
         }
+    }
+    
+    func navToKebbabaroEdit() -> some View {
+        let k = Kebabbaro(name: "Matteotti Turkish", imageName: "matteottikebab", address: "Piazza Matteotti, Bolzano BZ", points: 0)
+        modelContext.insert(k)
+        return EditKebabbaroView(kebabbaro: k)
     }
 }
 

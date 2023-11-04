@@ -10,6 +10,7 @@ import SwiftData
 
 struct KebabbaroView: View {
     @Bindable var kebabbaro: Kebabbaro
+//    @State var addresswidth
     var body: some View {
         NavigationLink(value: kebabbaro) {
             HStack {
@@ -21,14 +22,20 @@ struct KebabbaroView: View {
                         Spacer()
                     }
                     HStack {
-                        Text(kebabbaro.address).font(.subheadline).truncationMode(.tail).frame(width: 150, height:10, alignment: .leading)
+                        if kebabbaro.wheelChairAccessible {
+                            Image(systemName: "figure.roll")
+                        }
+                        if kebabbaro.petFriendly {
+                            Image(systemName: "dog")
+                        }
+                        Text(kebabbaro.address).font(.subheadline).truncationMode(.tail)
                         Spacer()
-                    }
+                    }.frame(width: 150, height: 10)
                 }
                 
                 Spacer()
                 
-                Text("\(kebabbaro.points)").foregroundStyle(kebabbaro.points > 0 ? .green : .red)
+                Text("\(kebabbaro.points)").foregroundStyle(kebabbaro.points > 0 ? .green : .red).frame(width: 30)
                 
                 Button() {
                     kebabbaro.points += 1
@@ -49,12 +56,13 @@ struct KebabbaroView: View {
         let container = try ModelContainer(for: Kebabbaro.self, configurations: config)
         
         let k = Kebabbaro(name: "Matteotti Turkish", imageName: "matteottikebab", address: "Piazza matteotti", points: 100)
+        let k2 = Kebabbaro(name: "Matteotti Icelandic", imageName: "matteottikebab", address: "Piazza matteotti", points: 0)
         
         return NavigationStack {
             List {
                 KebabbaroView(kebabbaro: k).modelContainer(container)
                 KebabbaroView(kebabbaro: k).modelContainer(container)
-                KebabbaroView(kebabbaro: k).modelContainer(container)
+                KebabbaroView(kebabbaro: k2).modelContainer(container)
             }
         }
     } catch {

@@ -7,11 +7,14 @@
 
 import SwiftUI
 import SwiftData
+import PhotosUI
 import MapKit
 
 struct EditKebabbaroView: View {
     @Bindable var kebabbaro: Kebabbaro
     @State private var coords: CLLocationCoordinate2D?
+    @State private var photo: PhotosPickerItem?
+    @State var data: Data?
     
     var body: some View {
         Form {
@@ -19,6 +22,36 @@ struct EditKebabbaroView: View {
             TextField("Indirizzo", text: $kebabbaro.address).onSubmit() {
                     // update Map marker
             }
+//            VStack {
+//                if let data = data, let uiimage = UIImage(data:data) {
+//                    Image(uiImage: uiimage).resizable().frame(width: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, height:100).scaledToFit()
+//                }
+//                PhotosPicker(selection: $photo, matching: .images) {
+//                    Text("pick photo")
+//                }
+//                .onChange(of: photo) { newValue in
+//                    guard let item = photo else {
+//                        return
+//                    }
+//                    item.loadTransferable(type: Data.self) { result in
+//                        switch result {
+//                        case .success(let data):
+//                            if let data = data {
+//                                self.data = data
+//                                kebabbaro.data = data
+//                            } else {
+//                                print("failed ti loaad")
+//                            }
+//                        case .failure(let failure):
+//                            fatalError("\(failure)")
+//                        }
+//                    }}
+//                .onAppear() {
+//                    if let data = kebabbaro.data {
+//                        self.data = data
+//                    }
+//                }
+//            }
             // TODO
 //            Map {
 //                Marker("Asd", coordinate: coords ?? CLLocationCoordinate2D(latitude: 0, longitude: 0))
@@ -64,7 +97,6 @@ struct EditKebabbaroView: View {
     func coordCallback(_ coordinates: CLLocationCoordinate2D) {
         print(coordinates)
         self.coords = coordinates
-        print(self.coords)
     }
     
 }
